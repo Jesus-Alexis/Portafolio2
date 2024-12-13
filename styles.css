@@ -138,11 +138,28 @@ label {
 }
 
 .profile__img {
+  /* Esta funcion sirve para hacer que 
+  mi imagen se recorte desde el centro */
+  clip-path: circle(50%);
   overflow: hidden;
   width: 250px;
   height: 250px;
-  border-radius: 50%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* HEADER QUERIST */
 @container header (min-width:800px) {
@@ -165,11 +182,11 @@ label {
   }
 
   .header__nav-item a {
-    color: #000000;
+    color: #ffff;
   }
 
   .header__nav-item a:hover {
-    color: #ffff;
+    color: #000000;
   }
 
   .header__open-nav-button {
