@@ -5,10 +5,7 @@
 
 body {
   font-family: sans-serif;
-  color: #101632dd;
-  background-image:url("img/Posible-imagen-para-portfolio.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  color: #000000;
 }
 
 body,
@@ -26,9 +23,7 @@ label {
 
 /* HEADER SECCTION */
 .header {
-  background-image: linear-gradient(#ae1a20, #c34f);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #9f111b;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,6 +95,7 @@ label {
     color: #fff;
     text-decoration: none;
     font-family: Tahoma;
+    font-size: 30px;
 }
 
 .header__nav-item a:hover{
@@ -111,38 +107,48 @@ label {
 
 /* ------PROFILE SECCTION------ */
 
-.porfile{
+.profile{
   container-name: profile;
   container-type:inline-size;
+  background-image: url("img/Posible-imagen-para-portfolio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.porfile__wraper{
+.profile__wrapper{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: linear-gradient(#ae1a20, #c34f);
+  max-width: 1400px;
+  color: #fff;
 }
 
 .profile__data-container{
   max-width: 600px;
-  width: 100%;
-  padding: 12px;
+  padding: 12px; 
 }
 
+
 .profile__img-container{
-  flex-wrap: wrap;
-  max-width: 230px;
-  border-radius: 500%;
-  overflow: hidden;
+  height: 270px;
+  width: 270px;
+  border-radius: 50%;
+  border: solid 10px #9f111b ;
+  margin: 25px 15px;
+}
+
+.img__profile{
+  z-index: 20;
 }
 
 .profile__img{
-  max-width: 100%;
-  width: 200px;
-  margin: 50px;
-  padding: 1rem;
-  border-radius: 500%;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
+
+
 
 
 
@@ -249,7 +255,7 @@ label {
         position: static;
         height: auto;
         width: auto;
-        justify-content: space-between;
+        justify-content: space-evenly;
         z-index: 3;
         background-image:initial;
     }
@@ -258,19 +264,19 @@ label {
         flex-direction: row;
         height: auto;
         width: auto;
-        gap:20px;
+        gap:25px;
         margin-right: 40px;
     }
-
+    
     .header__nav-item a{
-        color: #000333;
+      color: #000000;
     }
-
+    
     .header__nav-item a:hover{
-        color: #ffff;
+      color: #ffff;
     }
-
+    
     .header__open-nav-button{
-        display: none;
+      display: none;
     }
-}
+  }
