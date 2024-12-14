@@ -6,6 +6,10 @@
 body {
   font-family: sans-serif;
   color: #000000;
+  background: linear-gradient(to bottom, #333333,#292929, #1f1f1f, #151515,
+  #0b0b0b);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body,
@@ -107,12 +111,11 @@ label {
 .profile {
   container-name: profile;
   container-type: inline-size;
-  background: linear-gradient(to bottom, #333, #111, #000);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .profile__wrapper {
+  background: url("img/Posible-imagen-para-portfolio.jpg") bottom / 
+  cover  no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,7 +132,7 @@ label {
   height: 270px;
   width: 270px;
   border-radius: 50%;
-  border: solid 10px #f6f6f6;
+  border: solid 10px #9f111b;
   margin: 25px 15px;
 }
 
@@ -145,6 +148,47 @@ label {
   width: 250px;
   height: 250px;
 }
+
+.profile__name,.profile__social{
+  color: #9f111b;
+}
+
+.profile__social{
+  text-align: basline;
+}
+
+.resum{
+  font-size: 23px;
+  text-align: justify;
+}
+
+.contact img{
+  width: 80px;
+  height: 80px;
+  padding: 8px;
+  margin:5px;
+  margin-top: 30px;
+}
+
+.contact p{
+ text-align: center;
+ margin-bottom: 100%;
+}
+
+.profile__contact-container{
+  margin-right: 30px;
+  display: flex;
+  order: 3;
+  margin: 5px;
+  justify-content:center;
+}
+
+
+
+
+
+
+
 
 
 
