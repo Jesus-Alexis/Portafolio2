@@ -112,6 +112,8 @@ label {
   color: #c34f;
 }
 
+/* ------HEADER ENDS------ */
+
 /* ------PROFILE SECCTION------ */
 
 .profile {
@@ -120,9 +122,9 @@ label {
 }
 
 .profile__wrapper {
-  background: url("img/Posible-imagen-para-portfolio.jpg") bottom / cover
-    no-repeat;
+  background-image: -webkit-linear-gradient(#333, #222);
   border-radius: 0px 0px 15px 15px;
+  box-shadow: 0 0 15px 0 #9f111b;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -226,7 +228,7 @@ label {
 
 .btn-3 {
   font-size: 15px;
-  border: 1.5px solid #fff;
+  border: 2px solid #fff;
   overflow: hidden;
   z-index: 2;
 }
@@ -250,6 +252,52 @@ label {
   left: -20%;
 }
 
+/* ------PROFILE ENDS------ */
+
+
+/* ------PORTAFOLIO SECCTION------ */
+.portfolio{
+  background: url("img/Posible-imagen-para-portfolio.jpg") bottom / cover
+  no-repeat;
+  color: #ffff;
+  min-height: 100dvh;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  container-name: portfolio;
+  container-type:inline-size;
+  justify-content: space-evenly;
+}
+
+.portfolio__title{
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.portfolio__project-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1300px;
+  margin: auto;
+  width:100% ;
+  gap: 12px;
+  padding: 12px;
+  min-height: 80dvh;
+}
+
+.portfolio__project{
+  background-image: url("img/imagen.tetris.png");
+  background-position:center;
+  background-size: cover;
+  display: grid;
+  place-content: center;
+  border-radius: 8px;
+}
+
+.portfolio__project:hover{
+  opacity: 0.98;
+  outline: 2px solid #fff6;
+}
 
 
 
@@ -310,18 +358,20 @@ label {
     display: flex;
     margin: auto;
     margin-top: 20px;
-    width: 75dvw;
-    height: 78dvh;
+    width: 73dvw;
+    height: 68dvh;
     flex-direction: row;
     background-image: -webkit-linear-gradient(#333, #222);
     border-radius: 25px;
     box-shadow: 0 0 15px 0 #9f111b;
-    max-width: 75dvw;
+    max-width: 72dvw;
+    max-height: 68dvh;
+    padding: 40px;
   }
 
   .profile__contact-container{
     justify-content:space-evenly;
-    margin-left: 50px;
+    margin-left: 40px;
   }
 
   h1 {
@@ -332,55 +382,5 @@ label {
 
   .profile__data {
     max-width: 520px;
-  }
-}
-
-
-@container profile (min-width:800px) {
-  .profile__wrapper {
-    display: flex;
-    margin: auto;
-    margin-top: 20px;
-    width: 66dvw;
-    height: 66dvh;
-    flex-direction: row;
-    background-image: -webkit-linear-gradient(#333, #222);
-    border-radius: 25px;
-    box-shadow: 0 0 15px 0 #9f111b;
-    max-width: 75dvw;
-  }
-
-  .profile__img-container {
-    height: 170px;
-    width: 170px;
-    border-radius: 50%;
-    border: solid 10px #9f111b;
-    margin: 25px 15px;
-  }
-  
-  .img__profile {
-    z-index: 20;
-  }
-  
-  .profile__img {
-    /* Esta funcion sirve para hacer que 
-    mi imagen se recorte desde el centro */
-    clip-path: circle(50%);
-    overflow: hidden;
-    width: 150px;
-    height: 150px;
-  }
-  .resum {
-    font-size: 20px;
-    text-align: justify;
-  }
-
-  .contact img {
-    width: 2rem;
-    height: 2.5rem;
-  }
-  
-  .contact img:hover{
-    transform: scale(1.5);
   }
 }
