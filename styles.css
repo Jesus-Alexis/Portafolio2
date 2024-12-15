@@ -324,7 +324,8 @@ label {
 
 .profile__skill{
   display: grid;
-  grid-template-columns: 2;
+  grid-template-columns: repeat(auto-fit,minmax(150px,auto));
+  justify-content: center;
   max-width: 1300px;
   margin: auto;
   width: 100%;
