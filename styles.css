@@ -127,12 +127,13 @@ label {
   flex-direction: column;
   justify-content: center;
   max-width: 1400px;
-  height: 80dvh;
+  padding: 30px;
   color: #fff;
 }
 
 .space{
-  height: 5dvh;
+  height: 8dvh;
+  padding: 24px;
 }
 
 .profile__data-container {
