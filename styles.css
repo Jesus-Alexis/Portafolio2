@@ -261,7 +261,7 @@ label {
 .portfolio {
   margin-top: 20px;
   background: url("img/Posible-imagen-para-portfolio.jpg") bottom / cover
-    no-repeat;
+  no-repeat;
   color: #ffff;
   min-height: 100dvh;
   display: flex;
@@ -302,8 +302,41 @@ label {
   outline: 2px solid #fff6;
 }
 
+/* ------PORTAFOLIO ENDS------ */
 
 
+/* ------ SKILSS SECCTION------ */
+.skills{
+  display: flex;
+  min-height: 100dvh;
+  color: #ffff;
+  flex-direction: column;
+  text-align: center;
+  container-name:skills;
+  container-type: inline-size;
+  justify-content: space-evenly;
+}
+
+.skills__titulos{
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.profile__skill{
+  display: grid;
+  grid-template-columns: 2;
+  max-width: 1300px;
+  margin: auto;
+  width: 100%;
+  padding: 12px;
+  min-height: 80dvh;
+}
+
+.conocimientos{
+  max-width: 100%;
+  width: 64px;
+  margin: 10px 20px;
+}
 
 
 
