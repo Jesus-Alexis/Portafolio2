@@ -210,6 +210,7 @@ label {
   justify-content: space-evenly;
   align-items: center;
   margin-right: 9rem;
+  margin-bottom: 12px;
 }
 
 .btna {
@@ -224,6 +225,7 @@ label {
 .btn-3 a {
   text-decoration: none;
   color: #fff;
+  font-family: sans-serif;
 }
 
 .btn-3 {
@@ -256,6 +258,7 @@ label {
 
 /* ------PORTAFOLIO SECCTION------ */
 .portfolio {
+  margin-top: 20px;
   background: url("img/Posible-imagen-para-portfolio.jpg") bottom / cover
     no-repeat;
   color: #ffff;
@@ -342,6 +345,7 @@ label {
 
   .header__nav-item a {
     color: #000000;
+    font-size: 24px;
   }
 
   .header__nav-item a:hover {
@@ -361,8 +365,9 @@ label {
     display: flex;
     margin: auto;
     margin-top: 20px;
+    margin-bottom: 20px;
     width: 73dvw;
-    height: 66dvh;
+    height: 70dvh;
     flex-direction: row;
     background-image: -webkit-linear-gradient(#333, #222);
     border-radius: 25px;
@@ -384,6 +389,11 @@ label {
   .profile__data {
     max-width: 600px;
   }
+
+  .resum{
+    font-size: 18px;
+  }
+  
 }
 
 /*---------Profile Querist ENDS---------  */
