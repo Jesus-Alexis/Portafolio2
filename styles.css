@@ -133,7 +133,7 @@ label {
   color: #fff;
 }
 
-.space{
+.space {
   height: 8dvh;
   padding: 24px;
 }
@@ -191,7 +191,7 @@ label {
   height: 2.5rem;
 }
 
-.contact img:hover{
+.contact img:hover {
   transform: scale(1.5);
 }
 
@@ -200,7 +200,7 @@ label {
   display: flex;
   order: 3;
   justify-content: initial;
-  margin-right: 30px; 
+  margin-right: 30px;
 }
 
 .wrapper1 {
@@ -221,7 +221,7 @@ label {
   position: absolute;
 }
 
-.btn-3 a{
+.btn-3 a {
   text-decoration: none;
   color: #fff;
 }
@@ -254,50 +254,51 @@ label {
 
 /* ------PROFILE ENDS------ */
 
-
 /* ------PORTAFOLIO SECCTION------ */
-.portfolio{
+.portfolio {
   background: url("img/Posible-imagen-para-portfolio.jpg") bottom / cover
-  no-repeat;
+    no-repeat;
   color: #ffff;
   min-height: 100dvh;
-  display:flex;
+  display: flex;
   flex-direction: column;
   text-align: center;
   container-name: portfolio;
-  container-type:inline-size;
+  container-type: inline-size;
   justify-content: space-evenly;
 }
 
-.portfolio__title{
-  font-size: 3rem;
+.portfolio__title {
+  font-size: 4rem;
   margin-bottom: 0;
 }
 
-.portfolio__project-container{
+.portfolio__project-container {
   display: grid;
   grid-template-columns: 1fr;
   max-width: 1300px;
   margin: auto;
-  width:100% ;
-  gap: 12px;
+  width: 100%;
+  gap: 10px;
   padding: 12px;
   min-height: 80dvh;
 }
 
-.portfolio__project{
+.portfolio__project {
   background-image: url("img/imagen.tetris.png");
-  background-position:center;
+  background-position: center;
   background-size: cover;
   display: grid;
   place-content: center;
   border-radius: 8px;
 }
 
-.portfolio__project:hover{
+.portfolio__project:hover {
   opacity: 0.98;
   outline: 2px solid #fff6;
 }
+
+
 
 
 
@@ -340,37 +341,37 @@ label {
   }
 
   .header__nav-item a {
-    color: #ffff;
+    color: #000000;
   }
 
   .header__nav-item a:hover {
-    color: #000000;
+    color: #ffff;
+    text-decoration: none;
   }
 
   .header__open-nav-button {
     display: none;
   }
 }
+/*---------HEADER QUERIST ENDS---------  */
 
 /*---------Profile Querist---------  */
-@container profile (min-width:600px) {
+@container profile (min-width:56.25rem) {
   .profile__wrapper {
     display: flex;
     margin: auto;
     margin-top: 20px;
     width: 73dvw;
-    height: 68dvh;
+    height: 66dvh;
     flex-direction: row;
     background-image: -webkit-linear-gradient(#333, #222);
     border-radius: 25px;
     box-shadow: 0 0 15px 0 #9f111b;
-    max-width: 72dvw;
-    max-height: 68dvh;
     padding: 40px;
   }
 
-  .profile__contact-container{
-    justify-content:space-evenly;
+  .profile__contact-container {
+    justify-content: space-evenly;
     margin-left: 40px;
   }
 
@@ -381,6 +382,56 @@ label {
   }
 
   .profile__data {
-    max-width: 520px;
+    max-width: 600px;
+  }
+}
+
+/*---------Profile Querist ENDS---------  */
+
+/*---------PORTFOLIO QUERIST-----------  */
+@container portfolio (min-width: 56.25rem) {
+  .portfolio__project-container {
+    grid-template-columns: repeat(auto-fill,
+     minmax(400px, 1fr));
+  }
+
+  .portfolio__project:first-child {
+    grid-column: span 2;
+  }
+
+  .portfolio__project:nth-child(6) {
+    grid-column: span 2;
+  }
+}
+
+@container portfolio (min-width: 75rem) {
+  .portfolio__project-container {
+    grid-template-columns: repeat(auto-fill,
+     minmax(300px, 1fr));
+  }
+
+  .portfolio__project:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .portfolio__project:nth-child(6) {
+    grid-column: span 4;
+  }
+}
+
+@container portfolio (min-width: 81.25rem) {
+  .portfolio__project-container {
+    grid-template-columns: repeat(auto-fill,
+     minmax(300px, 1fr));
+  }
+
+  .portfolio__project:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .portfolio__project:nth-child(6) {
+    grid-column: span 4;
   }
 }
