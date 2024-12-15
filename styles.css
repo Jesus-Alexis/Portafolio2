@@ -6,8 +6,14 @@
 body {
   font-family: sans-serif;
   color: #000000;
-  background: linear-gradient(to bottom, #333333,#292929, #1f1f1f, #151515,
-  #0b0b0b);
+  background: linear-gradient(
+    to bottom,
+    #333333,
+    #292929,
+    #1f1f1f,
+    #151515,
+    #0b0b0b
+  );
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -114,13 +120,18 @@ label {
 }
 
 .profile__wrapper {
-  background: url("img/Posible-imagen-para-portfolio.jpg") bottom / 
-  cover  no-repeat;
+  background: url("img/Posible-imagen-para-portfolio.jpg") bottom / cover
+    no-repeat;
+  border-radius: 0px 0px 15px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 1400px;
   color: #fff;
+}
+
+.space{
+  height: 5dvh;
 }
 
 .profile__data-container {
@@ -149,31 +160,60 @@ label {
   height: 250px;
 }
 
-.profile__name,.profile__social{
+.profile__name,
+.profile__social {
   color: #9f111b;
 }
 
-.profile__social{
+.blue {
+  color: #48e;
+}
+
+.morado {
+  color: #87e;
+}
+
+.profile__social {
   text-align: basline;
 }
 
-.resum{
+.resum {
   font-size: 23px;
   text-align: justify;
 }
 
-.contact img{
+.contact img {
   width: 2.5rem;
   height: 2.5rem;
 }
 
-.profile__contacts{
+.contact img:hover{
+  transform: scale(1.5);
+}
+
+.profile__contacts {
   list-style: none;
   display: flex;
   order: 3;
-  justify-content:space-evenly;
-  margin-right: 24rem;
+  justify-content: initial;
+  margin-right: 30px; 
 }
+
+.button__cv a{
+  text-decoration: none;
+  color: #ffff;
+  font-family: Tahoma;
+}
+
+.button__cv{
+  padding: 20px;
+  font-family: Tahoma;
+  background-color: #333;
+  border: 2px solid #fff;
+}
+
+
+
 
 
 
@@ -229,33 +269,33 @@ label {
   }
 }
 
-
 /*---------Profile Querist---------  */
-@container profile (min-width:600px){
-  .profile__wrapper{
-    flex-direction: row;
-    padding: 15px;
-    background-color: transparent;
-    margin: auto;
-    height: 90dvh;
-  }
-
-  .profile__data-container-complete{
-    margin-left:30px;     
+@container profile (min-width:600px) {
+  .profile__wrapper {
     display: flex;
-    align-items: center; 
-    border-radius: 0 25px 25px 0;
+    margin: auto;
+    margin-top: 20px;
+    width: 59dvw;
+    height: 60dvh;
+    flex-direction: row;
+    background-image: -webkit-linear-gradient(#333, #222);
+    border-radius: 25px;
+    box-shadow: 0 0 15px 0 #9f111b;
+    max-width: 75dvw;
   }
 
-  h1{
+  .profile__contact-container{
+    justify-content:space-evenly;
+    margin-left: 50px;
+  }
+
+  h1 {
     margin-top: 0;
     font-size: 3rem;
     text-wrap: balance;
   }
 
-  .profile__data{
+  .profile__data {
     max-width: 520px;
   }
-
-
 }
