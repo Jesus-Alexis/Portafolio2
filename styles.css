@@ -179,6 +179,7 @@ label {
 
 .profile__social {
   text-align: basline;
+  margin-right: 20px;
 }
 
 .resum {
@@ -199,8 +200,8 @@ label {
   list-style: none;
   display: flex;
   order: 3;
-  justify-content: initial;
-  margin-right: 30px;
+  justify-content: space-evenly;
+  margin-right: 20px;
 }
 
 .wrapper1 {
@@ -391,7 +392,7 @@ label {
   }
 
   .resum{
-    font-size: 18px;
+    font-size: 25px;
   }
   
 }
