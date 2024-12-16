@@ -111,7 +111,6 @@ label {
   text-decoration: underline;
   color: #c34f;
 }
-
 /* ------HEADER ENDS------ */
 
 /* ------PROFILE SECCTION------ */
@@ -231,7 +230,7 @@ label {
 
 .btn-3 {
   font-size: 15px;
-  border: 2px solid #fff;
+  border: 3px solid #fff;
   overflow: hidden;
   z-index: 2;
 }
@@ -261,7 +260,7 @@ label {
 .portfolio {
   margin-top: 20px;
   background: url("img/Posible-imagen-para-portfolio.jpg") bottom / cover
-  no-repeat;
+    no-repeat;
   color: #ffff;
   min-height: 100dvh;
   display: flex;
@@ -304,58 +303,106 @@ label {
 
 /* ------PORTAFOLIO ENDS------ */
 
-
 /* ------ SKILSS SECCTION------ */
-.skills{
+.skills {
   display: flex;
-  min-height: 100dvh;
+  height: 76dvh;
   color: #ffff;
   flex-direction: column;
   text-align: center;
-  container-name:skills;
+  container-name: skill;
   container-type: inline-size;
-  justify-content: space-evenly;
+  margin-bottom: 25px;
 }
 
-.skills__titulos{
+.skills__titulos {
   font-size: 3rem;
   margin-bottom: 0;
 }
 
-.profile__skill{
+.profile__skill {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,auto));
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
   justify-content: center;
   max-width: 1300px;
   margin: auto;
   width: 100%;
   padding: 12px;
-  min-height: 80dvh;
+  min-height: 40dvh;
 }
 
-.conocimientos{
+.profile__skill:last-child {
+  grid-column: span 4;
+}
+
+.conocimientos {
   max-width: 100%;
   width: 64px;
   margin: 10px 20px;
 }
 
+/* -----SKILS ENDS------- */
 
 
+/* ----- Acerca de mi  SECCTION ------- */
+.sobremi {
+  display: flex;
+  flex-direction: column;
+  container-name: sobremi;
+  container-type:size;
+}
+
+.sobremi__container {
+  border-radius: 15px;
+  box-shadow: 0 0 15px 0 #9f111b;
+  background-image: -webkit-linear-gradient(#333, #222);
+  margin-bottom: 30px;
+}
+
+.sobremi__titulo {
+  font-size: 30px;
+}
+
+.sobremi__titulo,
+.sobremi__subtitulo {
+  text-align: center;
+  color: #9f111b;
+}
+
+.data {
+  color: #fff;
+  text-align: justify;
+}
+/* ----- Acerca de mi  ENDS ------- */
 
 
+/* ----- Certificado SECTION ------- */
 
+.certificados__container{
+  display: flex;
+  flex-direction: column;
+}
 
+.profile__certificados{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  justify-content: center;
+  max-width: 1300px;
+  margin: auto;
+  width: 100%;
+  padding: 12px;
+  min-height: 40dvh;
+}
 
+.certificados {
+  max-width: 100%;
+  width: 150px;
+  margin: 20px 20px;
+}
 
-
-
-
-
-
-
-
-
-
+.certificados:hover{
+  transform: scale(2);
+}
 
 
 /* --------HEADER QUERIST ----------*/
@@ -399,7 +446,7 @@ label {
   .profile__wrapper {
     display: flex;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 20px;
     width: 73dvw;
     height: 70dvh;
@@ -425,10 +472,9 @@ label {
     max-width: 600px;
   }
 
-  .resum{
+  .resum {
     font-size: 25px;
   }
-  
 }
 
 /*---------Profile Querist ENDS---------  */
@@ -436,8 +482,7 @@ label {
 /*---------PORTFOLIO QUERIST-----------  */
 @container portfolio (min-width: 56.25rem) {
   .portfolio__project-container {
-    grid-template-columns: repeat(auto-fill,
-     minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   }
 
   .portfolio__project:first-child {
@@ -451,8 +496,7 @@ label {
 
 @container portfolio (min-width: 75rem) {
   .portfolio__project-container {
-    grid-template-columns: repeat(auto-fill,
-     minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 
   .portfolio__project:first-child {
@@ -467,8 +511,7 @@ label {
 
 @container portfolio (min-width: 81.25rem) {
   .portfolio__project-container {
-    grid-template-columns: repeat(auto-fill,
-     minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 
   .portfolio__project:first-child {
@@ -480,3 +523,36 @@ label {
     grid-column: span 4;
   }
 }
+/*---------PORTFOLIO QUERIST ENDS-----------  */
+
+/*---------SKILLS QUERIST SECTION-----------  */
+@container skill (min-width: 800px) {
+  .skill__container {
+    margin-top: 99px;
+    padding-top: 60px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .skills {
+    min-height: 20dvh;
+  }
+}
+
+/*---------SOBREMI QUERIST SECCTION-----------  */
+@container sobremi (min-width: 56.25rem){
+  .sobremi{
+    max-width: 600dvw;
+  }
+  .sobremi__container{
+    margin: 25px;
+    padding: 20px;
+    margin-bottom: 50px;
+  }
+  .data{
+    font-size: 23px;
+    padding: 12px 0 0 0;
+    text-align: justify;
+  }
+}
+
