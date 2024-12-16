@@ -448,13 +448,15 @@ label {
     margin: auto;
     margin-top: 30px;
     margin-bottom: 20px;
-    width: 73dvw;
-    height: 70dvh;
+    min-height: 53dvh;
+    min-width: 59dvw;
     flex-direction: row;
     background-image: -webkit-linear-gradient(#333, #222);
     border-radius: 25px;
     box-shadow: 0 0 15px 0 #9f111b;
     padding: 40px;
+    max-height: 77dvh;
+    max-width: 55dvw;
   }
 
   .profile__contact-container {
@@ -549,9 +551,11 @@ label {
     padding: 20px;
     margin-bottom: 50px;
   }
-  .data{
+  .text__data{
+    display: block;
+    padding: 0 60px 0 60px;
+    margin: 35px;
     font-size: 23px;
-    padding: 12px 0 0 0;
     text-align: justify;
   }
 }
