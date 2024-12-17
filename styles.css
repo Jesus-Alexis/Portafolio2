@@ -183,7 +183,7 @@ label {
 
 .resum {
   font-size: 23px;
-  text-align:initial;
+  text-align: initial;
 }
 
 .contact img {
@@ -345,13 +345,12 @@ label {
 
 /* -----SKILS ENDS------- */
 
-
 /* ----- Acerca de mi  SECCTION ------- */
 .sobremi {
   display: flex;
   flex-direction: column;
   container-name: sobremi;
-  container-type:size;
+  container-type: size;
 }
 
 .sobremi__container {
@@ -377,15 +376,15 @@ label {
 }
 /* ----- Acerca de mi  ENDS ------- */
 
-
 /* ----- Certificado SECTION ------- */
 
-.certificados__container{
+.certificados__container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 95px;
 }
 
-.profile__certificados{
+.profile__certificados {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, auto));
   justify-content: center;
@@ -402,26 +401,29 @@ label {
   margin: 20px 20px;
 }
 
-.certificados:hover{
+.certificados:hover {
   transform: scale(2);
 }
 
 /* --------FORM SECTION ----------*/
 
-.form{
-  min-height: 50dvh;
+.form {
+  container-name: form;
+  container-type: inline-size;
+}
+
+.form__container {
+  min-height: 20dvh;
+  margin-top: 50rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
   padding: 30px 0;
-  container-name: form;
-  container-type: inline-size;
-  margin-top: 35rem;
 }
 
-.form__form{
+.form__form {
   background-color: transparent;
   padding: 12px 20px;
   max-width: 600px;
@@ -433,7 +435,9 @@ label {
   font-size: 16px;
 }
 
-.form__form input, textarea, select{
+.form__form input,
+textarea,
+select {
   width: 100%;
   box-sizing: border-box;
   padding: 6px 8px;
@@ -446,6 +450,34 @@ label {
   margin: 6px 0;
 }
 
+.wrapper2 {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+}
+
+.btn {
+  padding: 10px 100px;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 6px;
+  position: relative;
+}
+
+.btn-2 {
+  border: 1px solid #fffa;
+  color: #fffa;
+}
+
+.btn-2:hover {
+  animation: parpadear 2s infinite alternate backwards;
+}
+
+
+.button-container:has(.btn-2) {
+  filter: drop-shadow(0px 0px 15px #c34f),
+  drop-shadow(0px 0px 4px #c34f);
+}
 
 .form__input-container textarea {
   resize: none;
@@ -453,24 +485,17 @@ label {
   font-family: inherit;
 }
 
-legend{
+legend {
   padding: 8px;
 }
 
-fieldset{
+fieldset {
   margin: 20px 0;
   border: 1px solid #ddd6;
   border-radius: 5px;
 }
 
-.form__input-container input[type="submit"] {
-  padding: 12px;
-  color: #fff;
-}
-
 /* --------FORM ENDS ----------*/
-
-
 
 /* --------HEADER QUERIST ----------*/
 @container header (min-width:800px) {
@@ -499,7 +524,7 @@ fieldset{
 
   .header__nav-item a:hover {
     color: #fff;
-    border-radius:10px;
+    border-radius: 10px;
     padding: 5px;
     border: 3px solid #fff;
     text-decoration: none;
@@ -516,10 +541,10 @@ fieldset{
   .profile__wrapper {
     display: flex;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 60px;
     margin-bottom: 20px;
     min-height: 53dvh;
-    min-width: 59dvw; 
+    min-width: 59dvw;
     flex-direction: row;
     background-image: -webkit-linear-gradient(#333, #222);
     border-radius: 25px;
@@ -552,8 +577,8 @@ fieldset{
     display: flex;
     margin: auto;
     margin-top: 50px;
-    margin-bottom: 40px;
-   /*  min-height: 53dvh;
+    margin-bottom: 50px;
+    /*  min-height: 53dvh;
     min-width: 59dvw; */
     flex-direction: row;
     background-image: -webkit-linear-gradient(#333, #222);
@@ -570,7 +595,7 @@ fieldset{
     margin: auto;
     margin-top: 100px;
     margin-bottom: 100px;
-   /*  min-height: 53dvh;
+    /*  min-height: 53dvh;
     min-width: 59dvw; */
     flex-direction: row;
     background-image: -webkit-linear-gradient(#333, #222);
@@ -642,16 +667,16 @@ fieldset{
 }
 
 /*---------SOBREMI QUERIST SECCTION-----------  */
-@container sobremi (min-width: 56.25rem){
-  .sobremi{
+@container sobremi (min-width: 56.25rem) {
+  .sobremi {
     max-width: 600dvw;
   }
-  .sobremi__container{
+  .sobremi__container {
     margin: 25px;
     padding: 20px;
     margin-bottom: 50px;
   }
-  .text__data{
+  .text__data {
     display: block;
     padding: 0 60px 0 60px;
     margin: 35px;
@@ -660,17 +685,17 @@ fieldset{
   }
 }
 
-@container sobremi (min-width: 56.25rem){
-  .sobremi{
+@container sobremi (min-width: 75rem) {
+  .sobremi {
     margin-bottom: 30px;
     max-width: 600dvw;
   }
-  .sobremi__container{
+  .sobremi__container {
     margin: 25px;
     padding: 20px;
     margin-bottom: 50px;
   }
-  .text__data{
+  .text__data {
     display: block;
     padding: 0 60px 0 60px;
     margin: 35px;
@@ -678,18 +703,77 @@ fieldset{
     text-align: justify;
   }
 }
+
 /*---------SOBREMI QUERIST ENDS-----------  */
 
-
-
-
+/*---------FORM SECCTON-----------  */
+@container form (min-width: 56.25rem) {
+  .form__container {
+    min-height: 18dvh;
+    margin-top: 36rem;
+  }
+}
+/*---------FORM ENDS-----------  */
 
 @keyframes aparecer {
   from {
     opacity: 0;
   }
 
-  to{
+  to {
     opacity: 1;
+  }
+}
+
+@keyframes parpadear {
+  0% {
+    color: #fff3;
+    border: 1px solid #fff3;
+    text-shadow: none;
+    box-shadow: none;
+  }
+
+  25% {
+    border-color: #c34f;
+    color: #c3555f;
+    box-shadow: 0px 0px 6px #48e3, 0px 0px 16px #48e3;
+    text-shadow: 0px 0px 9px #c34f, 0px 0px 3px #c3555f;
+  }
+  30% {
+    color: #fff3;
+    border: 1px solid #fff3;
+    text-shadow: none;
+    box-shadow: none;
+  }
+
+  35% {
+    color: #c3555f;
+    text-shadow: 0px 0px 9px #c34f, 0px 0px 3px #c3555f;
+  }
+  46% {
+    color: #fff3;
+    border: 1px solid #fff3;
+    text-shadow: none;
+    box-shadow: none;
+  }
+
+  60% {
+    border-color: #c34f;
+    box-shadow: 0px 0px 6px #48e3, 0px 0px 16px #48e3;
+  }
+  
+
+  78% {
+    color: #fff3;
+    border: 1px solid #fff3;
+    text-shadow: none;
+    box-shadow: none;
+  }
+
+
+  100% {
+    border-color: #c34f;
+    color: #c3555f;
+    text-shadow: 0px 0px 9px #c34f, 0px 0px 3px #c3555f;
   }
 }
