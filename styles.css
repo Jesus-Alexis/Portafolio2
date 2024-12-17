@@ -200,6 +200,7 @@ label {
   display: flex;
   order: 3;
   justify-content: center;
+  margin-right: 48px;
 }
 
 .wrapper1 {
@@ -213,11 +214,10 @@ label {
 }
 
 .btna {
-  padding: 12px 14px;
+  padding: 13px 15px;
   background-color: transparent;
   color: #fff;
-  border-radius: 6px;
-  letter-spacing: 3px;
+  border-radius: 12px;
   position: absolute;
 }
 
@@ -225,10 +225,10 @@ label {
   text-decoration: none;
   color: #fff;
   font-family: sans-serif;
+  font-size: 15px;
 }
 
 .btn-3 {
-  font-size: 15px;
   border: 3px solid #fff;
   overflow: hidden;
   z-index: 2;
@@ -257,7 +257,7 @@ label {
 
 /* ------PORTAFOLIO SECCTION------ */
 .portfolio {
-  margin-top: 20px;
+  margin-top: 100px;
   background: url("img/Posible-imagen-para-portfolio.jpg") bottom / cover
     no-repeat;
   color: #ffff;
@@ -271,7 +271,7 @@ label {
 }
 
 .portfolio__title {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 0;
 }
 
@@ -281,9 +281,9 @@ label {
   max-width: 1300px;
   margin: auto;
   width: 100%;
-  gap: 10px;
-  padding: 12px;
-  min-height: 80dvh;
+  gap: 15px;
+  padding: 15px;
+  min-height: 100dvh;
 }
 
 .portfolio__project {
@@ -293,6 +293,9 @@ label {
   display: grid;
   place-content: center;
   border-radius: 8px;
+  animation: aparecer both;
+  animation-timeline: view();
+  animation-range: contain 10% cover 40%;
 }
 
 .portfolio__project:hover {
@@ -305,13 +308,13 @@ label {
 /* ------ SKILSS SECCTION------ */
 .skills {
   display: flex;
-  height: 76dvh;
+  min-height: 35dvh;
   color: #ffff;
   flex-direction: column;
   text-align: center;
   container-name: skill;
   container-type: inline-size;
-  margin-bottom: 25px;
+  margin-bottom: 12px;
 }
 
 .skills__titulos {
@@ -327,7 +330,7 @@ label {
   margin: auto;
   width: 100%;
   padding: 12px;
-  min-height: 40dvh;
+  min-height: 20dvh;
 }
 
 .profile__skill:last-child {
@@ -358,7 +361,7 @@ label {
   margin-bottom: 30px;
 }
 
-.sobremi__titulo {
+.sobremi__subtitulo {
   font-size: 30px;
 }
 
@@ -403,6 +406,71 @@ label {
   transform: scale(2);
 }
 
+/* --------FORM SECTION ----------*/
+
+.form{
+  min-height: 50dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 30px 0;
+  container-name: form;
+  container-type: inline-size;
+  margin-top: 35rem;
+}
+
+.form__form{
+  background-color: transparent;
+  padding: 12px 20px;
+  max-width: 600px;
+  width: 100%;
+  display: grid;
+  box-shadow: 0px 0px 12px #9f111b;
+  margin-top: 50px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.form__form input, textarea, select{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border: none;
+  border: 1px solid #777;
+  box-shadow: 0px 0px 15px #0003;
+  background-color: transparent;
+  border-radius: 5px;
+  color: #fff;
+  margin: 6px 0;
+}
+
+
+.form__input-container textarea {
+  resize: none;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+legend{
+  padding: 8px;
+}
+
+fieldset{
+  margin: 20px 0;
+  border: 1px solid #ddd6;
+  border-radius: 5px;
+}
+
+.form__input-container input[type="submit"] {
+  padding: 12px;
+  color: #fff;
+}
+
+/* --------FORM ENDS ----------*/
+
+
 
 /* --------HEADER QUERIST ----------*/
 @container header (min-width:800px) {
@@ -420,17 +488,20 @@ label {
     flex-direction: row;
     height: auto;
     width: auto;
-    gap: 32px;
+    gap: 35px;
     margin-right: 40px;
   }
 
   .header__nav-item a {
-    color: #000000;
+    color: #ffff;
     font-size: 24px;
   }
 
   .header__nav-item a:hover {
-    color: #ffff;
+    color: #fff;
+    border-radius:10px;
+    padding: 5px;
+    border: 3px solid #fff;
     text-decoration: none;
   }
 
@@ -445,22 +516,20 @@ label {
   .profile__wrapper {
     display: flex;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
     min-height: 53dvh;
-    min-width: 59dvw;
+    min-width: 59dvw; 
     flex-direction: row;
     background-image: -webkit-linear-gradient(#333, #222);
     border-radius: 25px;
     box-shadow: 0 0 15px 0 #9f111b;
     padding: 40px;
-    max-height: 77dvh;
-    max-width: 55dvw;
   }
 
   .profile__contact-container {
     justify-content: space-evenly;
-    margin-left: 40px;
+    margin-left: 45px;
   }
 
   h1 {
@@ -475,6 +544,41 @@ label {
 
   .resum {
     font-size: 25px;
+  }
+}
+
+@container profile (min-width:75rem) {
+  .profile__wrapper {
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+   /*  min-height: 53dvh;
+    min-width: 59dvw; */
+    flex-direction: row;
+    background-image: -webkit-linear-gradient(#333, #222);
+    border-radius: 25px;
+    box-shadow: 0 0 15px 0 #9f111b;
+    padding: 40px;
+    min-height: 77dvh;
+  }
+}
+
+@container profile (min-width:81.5rem) {
+  .profile__wrapper {
+    display: flex;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+   /*  min-height: 53dvh;
+    min-width: 59dvw; */
+    flex-direction: row;
+    background-image: -webkit-linear-gradient(#333, #222);
+    border-radius: 25px;
+    box-shadow: 0 0 15px 0 #9f111b;
+    padding: 40px;
+    min-height: 50dvh;
+    max-width: 55dvw;
   }
 }
 
@@ -527,16 +631,13 @@ label {
 /*---------PORTFOLIO QUERIST ENDS-----------  */
 
 /*---------SKILLS QUERIST SECTION-----------  */
-@container skill (min-width: 800px) {
+@container skill (min-width: 56.25rem) {
   .skill__container {
-    margin-top: 99px;
-    padding-top: 60px;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    align-items: center;
   }
 
   .skills {
-    min-height: 20dvh;
+    min-height: 5dvh;
   }
 }
 
@@ -559,3 +660,36 @@ label {
   }
 }
 
+@container sobremi (min-width: 56.25rem){
+  .sobremi{
+    margin-bottom: 30px;
+    max-width: 600dvw;
+  }
+  .sobremi__container{
+    margin: 25px;
+    padding: 20px;
+    margin-bottom: 50px;
+  }
+  .text__data{
+    display: block;
+    padding: 0 60px 0 60px;
+    margin: 35px;
+    font-size: 23px;
+    text-align: justify;
+  }
+}
+/*---------SOBREMI QUERIST ENDS-----------  */
+
+
+
+
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
