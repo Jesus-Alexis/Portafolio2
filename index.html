@@ -4,35 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PORTAFOLIO-WEB</title>
-    <link rel="icon" href="img/LOGOTIPO-lobo2.jpg" type="imge/jpg">
+    <link rel="icon" href="img/LOGOTIPO-lobo2.jpg" type="imge/jpg" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
-      <input class="header__checkbox" type="checkbox" id="open-menu" />
-      <label for="open-menu" class="header__open-nav-button" role="button">
-        <img
-          class="header__open-menu"
-          src="https://s2.svgbox.net/hero-solid.svg?ic=menu&color=000000"
-          width="40"
-          height="40"
-        />
-      </label>
-      <div class="header__logo-container">
-        <img
-          class="header__logo"
-          src="img/LOGOTIPO-lobo.png"
-          alt="Logotipo-lobo"
-        />
-      </div>
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-item"><a href="#inicio">Inicio</a></li>
-          <li class="header__nav-item"><a href="#portfolio">Portafolio</a></li>
-          <li class="header__nav-item"><a href="#skills">Conocimientos</a></li>
-          <li class="header__nav-item"><a href="#contact">Acerca de mi</a></li>
-        </ul>
-      </nav>
+      <aside class="sidebar">
+        <form class="sidebar__form">
+          <input class="header__checkbox" type="checkbox" id="open-menu" />
+          <label
+            for="open-menu"
+            class="material-symbols-outlined open-button"
+          >
+            menu
+          </label>
+          <label for="open-menu" class="material-symbols-outlined"
+            >menu_open</label
+          >
+        </form>
+          <picture class="sidebar__picture">
+            <source
+              srcset="img/LOGOTIPO-lobo1.2-P.png"
+              media="(max-width:57.5rem)"
+            />
+            <img src="img/LOGOTIPO-lobo.png" alt="" />
+          </picture>
+        <nav class="sidebar__nav">
+          <ul>
+            <li class="sidebar__item">
+              <span class="material-symbols-outlined">home</span>
+              <a href="#inicio">Inicio</a>
+            </li>
+            <li class="sidebar__item">
+              <span class="material-symbols-outlined">stacks</span>
+              <a href="#portfolio">Portafolio</a>
+            </li>
+            <li class="sidebar__item">
+              <span class="material-symbols-outlined">rocket_launch</span>
+              <a href="#skills">Conocimientos</a>
+            </li>
+            <li class="sidebar__item">
+              <span class="material-symbols-outlined">person</span>
+              <a href="#contact">Acerca de mi</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
     </header>
     <main class="profile" id="inicio">
       <div class="profile__wrapper">
