@@ -824,10 +824,10 @@ footer{
   }
 }
 
-@container form (min-width: 900px) {
+@container form (max-width: 900px) {
   .form__container {
-    min-height: 15dvh;
-    margin-top: 15rem;
+    min-height: 18dvh;
+    margin-top: 59rem;
   }
 }
 /*---------FORM ENDS-----------  */
